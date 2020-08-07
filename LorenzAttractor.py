@@ -12,20 +12,6 @@ class Simulation(object):   #create a class with all the following data:
         self.window.setWindowTitle("Simulation")    #set the window title
         self.window.setCameraPosition(distance=30, elevation=100) #set the camera position
         self.window.show() #show the window
-        #set grid
-        #gridx = gl.GLGridItem()
-        #gridx.scale(16, 16, 16)
-        #self.window.addItem(gridx)
-        #gridy = gl.GLGridItem()
-        #gridy.rotate(90, 0, 90, 1)
-        #gridy.translate(40, 0, 40)
-        #gridy.scale(4, 4, 4)
-        #self.window.addItem(gridy)
-        #gridz = gl.GLGridItem()
-        #gridz.rotate(90, 90, 0, 1)
-        #gridz.translate(0, -40, 40)
-        #gridz.scale(4, 4, 4)
-        #self.window.addItem(gridz)
 
         self.x, self.y, self.z = x, y, z 
         self.a, self.b, self.c, self.deltatime = a, b, c, deltatime
@@ -38,7 +24,6 @@ class Simulation(object):   #create a class with all the following data:
 
     #run algorithm and draw lines
     def Update(self):
-        count = 0
         #here starts the algoritm, it runs 5000 times
         for i in range(0, 5000, 1): 
             dx = (self.a * (self.y - self.x)) * self.deltatime
@@ -63,17 +48,6 @@ class Simulation(object):   #create a class with all the following data:
     
     #start properly
     def start(self):
-        #if (sys.flags.interactive != 1) or not hasattr(QtCore, "PyQT_VERSION"):
         QtGui.QApplication.instance().exec_()
-            
-
-    #animate and update  
-    def animation(self):
-        timer = QtCore.QTimer()
-        timer.timeout.connect(self.Update)
-        timer.start(20)
-        self.start()
-        self.Update()
     
 sim = Simulation(0.001, 0, 0, 10, 28, 8/3, 0.01)
-#sim.animation()
