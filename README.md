@@ -1,3 +1,6 @@
 # PyQtGraph-OpenGL
-repository in development, you can use all the code with no copyiright restrictions. 
+Here I simulated some famous attractors using PyQtGraph and OpenGL
+
+You can use all the code with no restrictions. 
+
 Made by @Sinho_Graphics on Instagram
