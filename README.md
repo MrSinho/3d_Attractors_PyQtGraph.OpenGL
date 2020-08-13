@@ -1,6 +1,7 @@
 # PyQtGraph-OpenGL
 ![](Images/Lorenz2.PNG)
 Here I simulated some famous attractors using **PyQtGraph** and **OpenGL**
+Each script is "plug and play"
 
 You can use all the code with no restrictions. 
 
