@@ -3,7 +3,7 @@ Here I simulated some famous attractors using PyQtGraph and OpenGL
 
 You can use all the code with no restrictions. 
 
-#Installation
+## Installation libraries
 
 pip install pytqtgraph
 
