@@ -1,4 +1,5 @@
 # PyQtGraph-OpenGL
+![](Images/Lorenz2.PNG)
 Here I simulated some famous attractors using **PyQtGraph** and **OpenGL**
 
 You can use all the code with no restrictions. 
@@ -18,7 +19,7 @@ pip install pytqtgraph.opengl
 ```python
 pip install numpy
 ```
+![](Images/Lorenz1.PNG)
 
-![]Images/Lorenz1.PNG
 
 made by [Sinho Graphics](https://www.instagram.com/sinho_graphics).
