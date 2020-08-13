@@ -19,6 +19,6 @@ pip install pytqtgraph.opengl
 pip install numpy
 ```
 
-![alt text](https://drive.google.com/file/d/11E0To618tyjC-qC3LzGRlZ-0DzbyNuIJ/view?usp=sharing)
+Lorenz1.PNG
 
 made by [Sinho Graphics](https://www.instagram.com/sinho_graphics).
