@@ -22,6 +22,6 @@ pip install numpy
 ```
 ![](Images/Lorenz1.PNG)
 
-##Done, now choose and run the python file
+## Done, now choose and run the python file
 
 made by [Sinho Graphics](https://www.instagram.com/sinho_graphics).
