@@ -7,7 +7,7 @@ You can use all the code with no restrictions.
 - install libraries
 - done
 
-## Install PyQtGraph and numpy
+## Install **PyQtGraph**, **PyOpenGL** and **numpy**
 
 ```python
 pip install pytqtgraph
