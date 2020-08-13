@@ -3,4 +3,8 @@ Here I simulated some famous attractors using PyQtGraph and OpenGL
 
 You can use all the code with no restrictions. 
 
-Made by @Sinho_Graphics on Instagram
+#Installation
+pip install pytqtgraph
+pip install pytqtgraph.opengl
+pip install numpy
+pip install sys
