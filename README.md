@@ -11,6 +11,8 @@ You can use all the code with no restrictions.
 
 ## Install **PyQtGraph**, **PyOpenGL** and **numpy**
 
+Works on ```Python 3.7.9```
+
 ```python
 pip install pytqtgraph
 ```
