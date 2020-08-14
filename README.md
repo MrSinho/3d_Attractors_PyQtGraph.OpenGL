@@ -15,7 +15,7 @@ You can use all the code with no restrictions.
 pip install pytqtgraph
 ```
 ```python
-pip install pytqtgraph.opengl
+pip install pyopengl
 ```
 ```python
 pip install numpy
