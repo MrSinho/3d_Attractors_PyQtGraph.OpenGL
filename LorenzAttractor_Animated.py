@@ -13,14 +13,28 @@ class Simulation(object):
         self.window.setWindowTitle("Simulation")    #set the window title
         self.window.setCameraPosition(distance=30, elevation=100) #set the camera position
         self.window.show() #show the window
-        
+
+        #set grid
+        #gridx = gl.GLGridItem()
+        #gridx.scale(16, 16, 16)
+        #self.window.addItem(gridx)
+        #gridy = gl.GLGridItem()
+        #gridy.rotate(90, 0, 90, 1)
+        #gridy.translate(40, 0, 40)
+        #gridy.scale(4, 4, 4)
+        #self.window.addItem(gridy)
+        #gridz = gl.GLGridItem()
+        #gridz.rotate(90, 90, 0, 1)
+        #gridz.translate(0, -40, 40)
+        #gridz.scale(4, 4, 4)
+        #self.window.addItem(gridz)
+
         self.x, self.y, self.z = x, y, z 
         self.a, self.b, self.c, self.deltatime = a, b, c, deltatime
         
         global points_list 
         points_list = [] #create an empty points_list
-        #self.start()
-        self.Update() #run the update function
+        
         
 
     #run algorithm and draw lines
@@ -36,18 +50,22 @@ class Simulation(object):
         newpoint = (self.x, self.y, self.z) # create a newpoint tuple
         #add the new point to the points list
         points_list.append(newpoint) #add the tuple to the points_list
-        print(points_list)
+        #print(points_list)
         global points
         points = np.array(points_list) #convert the points list to an array of tuples
         self.draw() #run the draw function
         
     def draw(self):
-        drawpoints = gl.GLLinePlotItem(pos=points, width=1, antialias=True) #make a variable to store drawing data(specify the points, set antialiasing)
-        self.window.addItem(drawpoints) #draw the item
+        try: self.window.removeItem(self.drawpoints)
+        except Exception: pass
+        self.drawpoints = gl.GLLinePlotItem(pos=points, width=1, antialias=True) #make a variable to store drawing data(specify the points, set antialiasing)
+        self.window.addItem(self.drawpoints) #draw the item
+        
     
     #start properly
     def start(self):
-        QtGui.QApplication.instance().exec_()
+        if (sys.flags.interactive != 1) or not hasattr(QtCore, 'PYQT_VERSION'):
+            QtGui.QApplication.instance().exec_()
             
 
     #animate and update  
@@ -56,7 +74,7 @@ class Simulation(object):
         timer.timeout.connect(self.Update)
         timer.start(20)
         self.start()
-        self.Update()
-    
-sim = Simulation(0.01, 0, 0, 10, 28, 8/3, 0.01)
-sim.animation()
+
+if __name__ == "__main__":
+    sim = Simulation(0.01, 0, 0, 10, 28, 8/3, 0.01)
+    sim.animation()
