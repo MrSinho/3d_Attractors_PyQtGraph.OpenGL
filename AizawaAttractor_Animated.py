@@ -17,10 +17,7 @@ class Simulation(object):   #create a class with all the following data:
         self.a, self.b, self.c, self.d, self.e, self.f, self.deltatime = a, b, c, d, e, f, deltatime
         
         global points_list
-        points_list = []    #create an empty list
-        #self.animation()
-        self.Update()
-        
+        points_list = []    #create an empty list        
 
     #run algorithm and draw lines
     def Update(self):
@@ -42,6 +39,8 @@ class Simulation(object):   #create a class with all the following data:
         self.draw() #run the draw function
 
     def draw(self):
+        try: self.window.removeItem(self.drawpoints)
+        except Exception: pass
         drawpoints = gl.GLLinePlotItem(pos=points, width=1, antialias=True) #make a variable to store drawing data(specify the points, set antialiasing)
         self.window.addItem(drawpoints) #draw the item
     
@@ -55,7 +54,6 @@ class Simulation(object):   #create a class with all the following data:
         timer.timeout.connect(self.Update)
         timer.start(20)
         self.start()
-        self.Update()
 
                 # x   y  z    a      b  c    d    e     f    deltatime
 sim = Simulation(0.1, 0, 0, 0.95, 0.7, 0.6, 3.5, 0.25, 0.1, 0.0001)
