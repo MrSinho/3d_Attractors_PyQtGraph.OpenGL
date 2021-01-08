@@ -14,12 +14,9 @@ You can use all the code with no restrictions.
 Works on ```Python 3.7.9```
 
 ```python
+pip install pyqt5
 pip install pytqtgraph
-```
-```python
 pip install pyopengl
-```
-```python
 pip install numpy
 ```
 ![](Images/Lorenz1.PNG)
