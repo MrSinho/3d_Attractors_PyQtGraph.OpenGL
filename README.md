@@ -24,4 +24,4 @@ pip install numpy
 ## Done
 Now choose and run a simulation.
 
-made by [Sinho Graphics](https://www.instagram.com/sinho_graphics).
+made by MrSinho.
